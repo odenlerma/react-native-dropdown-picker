@@ -371,7 +371,8 @@ class DropDownPicker extends React.Component {
         }
         
         let len2 = label.length;
-        return label + (len !== len2 ? '...' : '');
+        let labelTruncate = label + (len !== len2 ? '...' : '')
+        return item?.subLabel ? "(" + labelTruncate + ") " + item?.subLabel : labelTruncate;
     }
 
     getChildren(parent) {
